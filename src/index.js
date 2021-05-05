@@ -4,9 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const state = {
+  todos : [
+    { id: 1, name:'Render Static UI', isComplete: true},
+    { id: 2, name:'Create Initial State', isComplete: true},
+    { id: 3, name:'Render Based on state', isComplete: true},
+  ]
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App todos = {state.todos} />
   </React.StrictMode>,
   document.getElementById('root')
 );

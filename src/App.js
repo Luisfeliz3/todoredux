@@ -1,35 +1,25 @@
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { render } from '@testing-library/react';
+import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
 
-function App() {
+class App extends Component {
+render(){
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+       
        <div clasName ="Todo-App">
-         <form>
-           <input type = "text"/>
-           
-         </form>
+      <TodoForm />
 
-         <div className="Todo-List">
-           <ul>
-             <li >
-               <input type = "checkbox"/> Create static UI
-             </li>
-             <li >
-               <input type = "checkbox"/> Create INitial State 
-             </li>
-             <li >
-               <input type = "checkbox"/> Use state to Render UI
-             </li>
-           </ul>
-         </div>
-
+      <TodoList todos = {this.props.todos}/>
        </div>
       </header>
     </div>
   );
+}
 }
 
 export default App;
