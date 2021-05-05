@@ -2,7 +2,7 @@ import reducer from "./todo";
 
 describe("Todo Reducer", () => {
   test("returns a state object", () => {
-    const result = reducer(undefined, { type: "ANYTHING" });
+    const result = reducer(undefined, { type: 'ANYTHING' });
     expect(result).toBeDefined()
      })
 
@@ -14,7 +14,7 @@ describe("Todo Reducer", () => {
             { id: 2, name: "Create Initial State", isComplete: false },
             { id: 3, name: "Use state to render UI", isComplete: false },
           ],
-        };
+ };
       
         const expectedState = {
           todos: [
